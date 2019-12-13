@@ -1,0 +1,21 @@
+﻿<Window x:Class="Bluetooth_Demo.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Aplikacja Bluetooth" Height="234.555" Width="685" ResizeMode="NoResize">
+    <Grid Margin="0,0,0,1.778">
+
+
+        <Button Margin="26,13,393.4,0" x:Name="btn_find" Height="23" VerticalAlignment="Top" Click="btn_find_Click" Content="Wyszukaj urządzenia BT"/>
+        <ProgressBar Height="26" Margin="151.167,182,14.999,0" Name="pb" VerticalAlignment="Top" IsIndeterminate="True" Visibility="Hidden" Grid.ColumnSpan="3" Grid.Column="2" />
+        <ListBox SelectionChanged="device_list_SelectionChanged" Margin="311.111,13.111,0,0" Name="device_list" HorizontalAlignment="Left" Width="328.889" Height="105.05" VerticalAlignment="Top" />
+        <Label Height="28" Margin="114.943,128.828,393.334,0" x:Name="label1" VerticalAlignment="Top" Content="Nazwa wybranego urządzenia:"/>
+        <Label Height="28" HorizontalAlignment="Right" Margin="0,262.495,395.555,-35.384" Name="label2" VerticalAlignment="Top" Width="73">Połączony:</Label>
+        <Label Height="28" Margin="53.165,262.495,356.001,-35.384" Name="label3" VerticalAlignment="Top">Autoryzowany:</Label>
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,133.828,40,0" Name="txt_devicename" VerticalAlignment="Top" Width="328.889" IsReadOnly="True" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,262.495,324.555,-30.384" Name="txt_connected" VerticalAlignment="Top" Width="66" IsReadOnly="True" />
+        <TextBox HorizontalAlignment="Right" Margin="0,262.495,468.555,-33.384" Name="txt_authenticated" Width="68" Height="26" VerticalAlignment="Top" IsReadOnly="True" />
+        <Button Height="23" HorizontalAlignment="Right" Margin="0,67.161,393.334,0" x:Name="btn_browse" VerticalAlignment="Top" Width="258.834" Click="btn_browse_Click" Content="Wyszukaj plik który chcesz wysłać"/>
+        <Button Height="23" HorizontalAlignment="Right" Margin="0,95.161,393.334,0" Name="btn_send" VerticalAlignment="Top" Width="258.834" Click="btn_send_Click" IsEnabled="False">Wyślij plik</Button>
+        <Button Content="Paruj" Margin="26,42,393.4,0" VerticalAlignment="Top" Name="btn_pair" Click="btn_pair_Click" Height="20"/>
+    </Grid>
+</Window>
